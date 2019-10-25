@@ -1,0 +1,29 @@
+<br>
+<br>
+<div class="container" style="padding-left:0%; padding-right:0%">
+
+  <div class="row">
+    <div class="search-hero" style="margin-left: 15%; width: 50%;">
+      <input class="form-control" type="text" name="search" [(ngModel)]="term" autocomplete="off" placeholder="&#61442;  Start searching for an Employee">
+    </div>
+</div>
+<br>
+<br>
+
+  <div class="row" style="padding-left:0%; padding-right:0%; margin: 0%;">
+<div *ngFor="let person of personList |filter:term; index as i;" style="margin: 0.5%; padding: 0%">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="../../assets/person.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">BMO Employee</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ person.firstName }}</li>
+    <li class="list-group-item">{{person.lastName}}</li>
+  </ul>
+</div>
+</div>
+  </div>
+  </div>   
+  <br>
+<br>
